@@ -1,0 +1,124 @@
+[data-theme="light"] {
+    --bg-color: #f9f8f8;
+    /* home */
+    --home-btn-bg: var(--button-bg);
+    --home-btn-drop-shadow: 0 4px 0px rgba(0, 110, 255, 0.9);
+    --home-btn-color: #2b2b2b;
+    --back-btn-bg: var(--button-bg);
+    --back-btn-color: var(--info-color);
+    --home-icons: #050505;
+    /* game */
+    --badge-bg: crimson;
+    --badge-color: #fff;
+    --button-bg: #00bcd4;
+    --button-color: #000;
+    --button-hover: #00acc1;
+    --level-color: #000;
+    /* --quote-bg: rgba(0,0,0,0); */
+    --quote-bg: var(--bg-color);
+    --quote-color: #000;
+    /* info */
+    --info-bg: #ececec;
+    --info-color: #000;
+    --submit-btn-bg: #457999;
+    --status: #00bcd4b0;
+}
+[data-theme="dark"] {
+    --bg-color: #2b2e31;
+    /* home */
+    --home-btn-bg: var(--button-bg);
+    --home-btn-drop-shadow: 0 4px 0px rgba(233, 212, 226, 0.3);
+    --home-btn-color: #2b2b2b;
+    --back-btn-bg: var(--button-bg);
+    --back-btn-color: #2b2b2b;
+    --home-icons: #e3a;
+    /* game */
+    --badge-bg: crimson;
+    --badge-color: #fff;
+    --button-bg: #f7fbf9;
+    --button-color: #000;
+    --button-hover: #eaeaea;
+    --level-color: #000;
+    --quote-bg: #e5fbff30;
+    --quote-color: #fff;
+    /* info */
+    --info-bg: #ffffff2e;
+    --info-color: #fff;
+    --submit-btn-bg: #f0f0f0;
+    --status: #ee33aa9c;
+}
+[data-theme="nat"] {
+    --bg-color: #662359;
+    /* home */
+    --home-btn-bg: var(--button-bg);
+    --home-btn-drop-shadow: 0 4px 0px rgba(1, 204, 45, 0.3);
+    --home-btn-color: #2b2b2b;
+    --back-btn-bg: var(--button-bg);
+    --back-btn-color: var(--info-color);
+    --home-icons: #7d126d;
+    /* info */
+    --badge-bg: crimson;
+    --badge-color: #fff;
+    --button-bg: #60e66f;
+    --button-color: #000;
+    --button-hover: #3bc14a;
+    --level-color: #000;
+    /* --quote-bg: rgba(0,0,0,0); */
+    --quote-bg: var(--bg-color);
+    --quote-color: #fff;
+    /* info */
+    --info-bg: #4b1f48;
+    --info-color: #fff;
+    --submit-btn-bg: #f0f0f0;
+    --status: #60e66f9c;
+}
+[data-theme="alt1"] {
+    --bg-color: #3e7980;
+    /* home */
+    --home-btn-bg: var(--button-bg);
+    --home-btn-drop-shadow: 0 4px 0px rgba(245, 220, 0, 0.3);
+    --home-btn-color: #2b2b2b;
+    --back-btn-bg: var(--button-bg);
+    --back-btn-color: #2b2b2b;
+    --home-icons: #166888;
+    /* game */
+    --badge-bg: crimson;
+    --badge-color: #fff;
+    --button-bg: #e6e660;
+    --button-color: #000;
+    --button-hover: #d3d355;
+    --level-color: #000;
+    /* --quote-bg: rgba(0,0,0,0); */
+    --quote-bg: var(--bg-color);
+    --quote-color: #fff;
+    /* info */
+    --info-bg: #1f464b;
+    --info-color: #fff;
+    --submit-btn-bg: #f0f0f0;
+    --status: #e6e660a6;
+}
+[data-theme="minimal"] {
+    --bg-color: rgba(249, 248, 248, 0.01);
+    /* home */
+    --home-btn-bg: var(--button-bg);
+    --home-btn-drop-shadow: 0 4px 0px rgba(0, 0, 0, 0.3);
+    --home-btn-color: #2b2b2b;
+    --back-btn-bg: #353535ba;
+    --back-btn-color: var(--info-color);
+    --home-icons: #666;
+    /* game */
+    --badge-bg: crimson;
+    --badge-color: #fff;
+    --button-bg: rgba(0,0,0,0);
+    --button-color: #000;
+    --button-hover: rgba(20, 20, 20, 0.05);
+    --level-color: #000;
+    /* --quote-bg: rgba(0,0,0,0); */
+    --quote-bg: var(--bg-color);
+    --quote-color: #000;
+    /* info */
+    --info-bg: rgba(255, 255, 255, 0.1);
+    --info-color: #000;
+    --submit-btn-bg: #666;
+    --status: #41494ab0;
+}

@@ -4,161 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nyakotey">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
-    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
-    <link rel="stylesheet" href="infinitap.css">
-    <script src="infinitap.js"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="fontawesome-5.15.4/css/all.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/infinitap.css">
+    <script src="js/infinitap.js"></script>
     <title>Infinitap Game</title>
 </head>
 
-<body data-theme="dark">
+<body>
+    <!-- splash screen -->
+    <aside class="splash-screen">
+        <img class="splash-screen__icon" src="img/infinitap@0,5x.png"/>
+        <div class="splash-screen__motto">Tap Tap & Away!</div>
+    </aside>
+
+    <!-- main page -->
     <main class="page home-page">
-        <div class="home-opt">
-            <button class="home-btn" data-page="game-page">New Game</button> 
+        <div class="home-page__opt menu-new">
+            <button class="btn home-page__btn" data-page="game-page"><i class="fas fa-play fa-lg"></i> &nbsp;&nbsp; New Game</button> 
         </div>
-        <div class="home-opt">
-            <button class="home-btn" data-page="score-page">ScoreBoard</button> 
+        <div class="home-page__opt menu-scores">
+            <button class="btn home-page__btn" data-page="score-page"><i class="fas fa-trophy fa-lg"></i> &nbsp;&nbsp; ScoreBoard</button> 
         </div>
-        <div class="home-opt">
-            <button class="home-btn" data-page="help-page">Help</button> 
+        <div class="home-page__opt menu-help">
+            <button class="btn home-page__btn" data-page="help-page"><i class="fas fa-info-circle fa-lg"></i> &nbsp;&nbsp; Help</button> 
         </div>
-        <div class="home-opt">
-            <button class="home-btn" data-page="settings-page">Settings</button> 
+        <div class="home-page__opt menu-settings">
+            <button class="btn home-page__btn" data-page="settings-page"><i class="fas fa-cog fa-lg"></i> &nbsp;&nbsp; Settings</button> 
         </div>
-        <div class="home-opt">
-            <button class="home-btn" data-page="about-page">About</button> 
+        <div class="home-page__opt menu-about">
+            <button class="btn home-page__btn" data-page="about-page"><i class="fas fa-copyright fa-lg"></i> &nbsp;&nbsp; About</button> 
         </div>
         <div class="status">
-            <span id="date"></span>
-            <span id="note">Made with <i class="fas fa-heart" style="color: tomato;"></i></span>
+            <div id="status__date"></div>
+            <div id="status__note">Made with <i class="fas fa-heart" style="color: tomato;"></i></div>
         </div>
     </main>
 
-    <!-- option 1 start: game page -->
+    <!-- option 1 new game: game page -->
     <section class="page game-page">
-        <span class="nav-btn"> <i class="fas fa-home"></i> </span>
-        <span class="level"></span>
-        <div class="show-quote"></div>
-        <div class="user">
-            <button class="game-btn"> Tap Me <span class="notification"></span></button>
+        <button class="btn quit-btn"> <i class="fas fa-home"></i> </button>
+        <span class="game-page__level"></span>
+        <div class="game-page__show-quote"></div>
+        <div class="game-page__user">
+            <button class="btn game-btn"> Tap Me <span class="game-page__notification"></span></button>
         </div>
     </section>
     
     <!-- option 2 scores: score page -->
     <section class="page score-page">
-        <div class="info">
-            <ol></ol>
+        <div class="info score-info">
+            <ol class="score-list"></ol>
         </div>
     </section>
     
     <!-- option 3 help: help page -->
     <section class="page help-page">
         <div class="info help-info">
-            <p>Tap the button continuously till you are tired. </p>
-            <p>A number of taps equals a new level depending on difficulty.</p>
-            <p>Which level will you get to before quitting?     </p>                    
+            <div class="help-info__sect">
+                <h3>How To Play</h3>
+                <p> A simple clicker game; tap the game button until you are tired :)</p>
+                <p>Keep setting and breaking highscores!</p>
+                <p>A number of taps equals a new level depending on difficulty you choose.</p>
+                <p>Watch out, clicking the button when it goes Skull means Game Over!</p>
+            </div>
+            <div class="help-info__sect">
+                <h3>Game Progress</h3>
+                <p> You can save and restore your game data from the settings menu</p>                    
+            </div>               
         </div>
     </section>
     
     <!-- option 4 setting: settings page -->
     <section class="page settings-page">
         <div class="info settings-info">
-            <details>
-                <summary> Difficulty </summary>
-                <label><input type="radio" name="difficulty" value="easy" checked> Easy </label>
-                <label><input type="radio" name="difficulty" value="medium" > Medium </label>
-                <label><input type="radio" name="difficulty"value="hard" > Hard </label>
+            <details class="settings-info__sect"  open>
+                <summary>Difficulty</summary>
+                <label class="label"><input type="radio" name="difficulty" value="easy" checked> Easy </label>
+                <label class="label"><input type="radio" name="difficulty" value="medium" > Medium </label>
+                <label class="label"><input type="radio" name="difficulty"value="hard" > Hard </label>
             </details> 
-            <details open>
-                <summary> Music </summary>
-                <label> 
+
+            <details class="settings-info__sect"  open>
+                <summary>Music</summary>
+                <label class="label"> 
                     <input type="checkbox" name="enable-audio" class="enable-audio" checked> Enable Audio
                 </label>
             </details> 
-            <details open>
+            
+            <details class="settings-info__sect"  open>
                 <summary>Themes</summary>
                 <div>
-                    <span class="theme light-theme"></span>
-                    <span class="theme dark-theme"></span>
-                    <span class="theme nat-theme"></span>
-                </div>
-                
+                    <span class="settings-info__theme light-theme-thumbnail" title="light"></span>
+                    <span class="settings-info__theme dark-theme-thumbnail" title="dark"></span>
+                    <span class="settings-info__theme nat-theme-thumbnail" title="nat"></span>
+                    <span class="settings-info__theme alt1-theme-thumbnail" title="alt1"></span>
+                    <span class="settings-info__theme minimal-theme-thumbnail" title="minimal"></span>
+                </div> 
+                <div>
+                    <label class="label bg-theme__label">
+                        <input type="checkbox" name="enableAnimatedBg" class="bg-theme__enable" checked> use animated backgrounds 
+                    </label>
+                    <div class="bg-theme-ico">
+                    </div>
+                </div>               
             </details>
 
-            <details>
+            <details class="settings-info__sect" >
                 <summary>Custom Additions</summary>
-                <p class="small-text">Your input here will be added to the game</p>
-                <p>
-                    <label>Quote: <input type="text" class="user-input user-quote"></label>
+                <p class="user-alert"><i class="fas fa-info-circle"></i> Your input here will be added to the game</p>
+                <p class="label-grid">
+                    <label for="user-quote" class="label">Quote: </label>
+                    <input type="text" class="user-input user-quote" id="user-quote">
+                    
+                    <label for="user-emoji" class="label">Emoji: </label>
+                    <input type="text" class="user-input user-emoji" id="user-emoji">
                 </p>
-                <p>
-                    <label>Emoji: <input type="text" class="user-input user-emoji"></label>
-                </p>
-                <p><input type="submit" value="Submit" class="submit-btn"></p>
+                <p><input type="submit" value="Submit" class="btn submit-btn"></p>
             </details>
+
+            <details class="settings-info__sect"  open>
+                <summary>Sync data</summary>
+                <button class="btn load-btn"><i class="fas fa-history"></i> Load game</button>
+                <button class="btn save-btn"><i class="fas fa-save"></i> Save game</button>
+            </details>            
         </div>
     </section>
     
     <!-- option 5 about: about page -->
     <section class="page about-page">  
         <div class="info about-info">
-            <p>Infinitap</p>
-            <p>Made by Nyakotey</p> 
-            <p>06-01-2021_v2</p>
-            <p>A simple clicker game with focus not on the game itself [silly laf] but on the ui and presentation
-                Enjoy!</p>
-            <p>HTML5, CSS3 and ES6</p>
-            <details>
+            <div class="about-info__grid">
+                <p class="grid__items">Title</p>
+                <p class="grid__items">Infinitap v3</p>
+                <p class="grid__items">Author</p>
+                <p class="grid__items">Nyakotey</p>
+                <p class="grid__items">Date</p>
+                <p class="grid__items">2021</p>
+                <p class="grid__items">Desc</p>
+                <p class="grid__items">A simple clicker game with with greater focus on the game's architecture</p>
+                <p class="grid__items">Stack</p>
+                <p class="grid__items">HTML5, CSS3 and ES6</p>
+            </div>
+            
+            <div class="about-info__text">Enjoy!</div>
+            
+            <details class="about-info__changelog">
                 <summary>View changelog</summary>
-                <dl class="changelog">
-                   <dt> 04-01-2021_v1.0.0 - just game ui and logic </dt>
-                    <dt> 06-01-2021_v2.0.0 - total redesign: </dt>
-                        <dd> homepage with 5 sections:</dd> 
-                        <dd> start **scoreboard help **settings about  ** - not implemented </dd>
-                        <dd> nav button and back button </dd>
-                      <dt> v2.0.1 - fix back button styling </dt>
-                      <dt> v2.1.0 - settings page added - </dt>
-                        <dd> custom input , select theme </dd>
-                      <dt>v2.2.0 - added audio using the Web audio API    09-01-2021</dt>
-                </dl>
+                <ul class="changelog__list">
+                    <li class="changelog__list__item">v1 - simple tapping game</li>
+                    <li class="changelog__list__item">v2 - several sections now added</li>
+                    <li class="changelog__list__item">v3 - massive revamp; customization features added</li>
+                </ul>
+                <div><a class="changelog__link" href="changelog.txt" target="_blank"> Read the full changelog here</a></div>
             </details>
         </div> 
     </section>
-    
 </body>
 </html>
-<!-- 
-    Infinitap changelog
-    04-01-2021_v1.0.0 - just game ui and logic
-    06-01-2021_v2.0.0 - total redesign:
-        homepage with 5 sections: start **scoreboard help **settings about  ** - not implemented
-        nav button and back button
-    v2.0.1 - fix back button styling
-    v2.1.0 - settings page added -
-        custom input, select theme
-    v2.2.0 - added audio using the Web audio API    09-01-2021
-    v2.2.1 - added difficulty setting: not very useful at the moment since game reset functions have not been implemented yet; I wonder how am even gonna do that
-    v2.2.2 - reset added
-        wow, that was easier than I thought. Well it owes to the fact that I tried to make everything reusable right from the start; conscious separation of concerns esp. 
-        on this note, I'll merge the .1 and .2 to make it v2.3.0 
-    v2.3.0 - game resets upon exiting game screen, difficulty mode added, minor styling fixes.
-    v2.4.0 - Scoreboard implemented. only lacks removing duplicate scores.    11-01-2021 
-    v2.4.1 - duplicate and empty score check implemented 30-09-21. just this afternoon I sat down to do this after a really long break (since 11-01-2021!). I'm so happy that I was able to sit down, understand my code and eventually do this after a long break from coding!! I sat behind this because I'm done with University hooray and have this time to myself ie before NSS starts. 
-    I may start using typescript soon who knows. Why? well recently I've been exposed to it. I must say that I loved the idea of types. you know I was also learning C++ and Java on Sololearn (just to get more XP by lesson completion and coding solutions) and I came to appreciate explicitly writing types; you know what data to expect and hence error if different. I appreciated this when revisiting this code because it took a while for me to get what those function parameters value type were, with typescript this would have been a breeze.
-
-    ideas for further improvements
-    confirm dialog on game page when exiting. can try making it option to pause or exit instead
-    can add background music as well.
-    refactor code to make it more understandable and readable
-    ui/css redesign
-
-    I can end this project at this point cos my initial vision for this has been exceeded! yes, check the version one! But I'll keep adding to it and improving it, trying to apply every knowledge I have.
- -->
-<!-- 
-    work towards v3 begins now with v2.5!
-    v2.5 used native confirm method to implement the quit game dialog. Also made the status bar with time and the popular 'made with <3' note. you know the 2nd one should even be its own version ie v2.6 cause it is also its own feature! Anyways this means I can break up the larger features to be implemented.       20-10-2021
-    
- -->

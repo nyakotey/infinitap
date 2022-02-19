@@ -1,0 +1,56 @@
+Infinitap Game Changelog
+04-01-2021_v1.0.0 - just game page ui and logic
+06-01-2021_v2.0.0 - massive feature additions:
+    homepage with 5 sections: start **scoreboard help **settings about  ** - not implemented
+    nav button and back button
+v2.0.1 - fix back button styling
+v2.1.0 - settings page added -
+    custom input, select theme
+v2.2.0 - added audio using the Web audio API    09-01-2021
+v2.2.1 - added difficulty setting: not very useful at the moment since game reset functions have not been implemented yet; I wonder how am even gonna do that
+v2.2.2 - reset added
+    wow, that was easier than I thought. Well it owes to the fact that I tried to make everything reusable right from the start; conscious separation of concerns esp. 
+    on this note, I'll merge the .1 and .2 to make it v2.3.0 
+v2.3.0 - game resets upon exiting game screen, difficulty mode added, minor styling fixes.
+v2.4.0 - Scoreboard implemented. only lacks removing duplicate scores.    11-01-2021 
+v2.4.1 - duplicate and empty score check implemented 30-09-21. 
+just this afternoon I sat down to do this after a really long break (since 11-01-2021!). I'm so happy that I was able to sit down, understand my code and eventually do this after a long break from coding!! I sat behind this because I'm done with University hooray and have this time to myself ie before NSS starts. 
+I may start using typescript soon who knows. Why? well recently I've been exposed to it. I must say that I loved the idea of types. you know I was also learning C++ and Java on Sololearn (just to get more XP by lesson completion and coding solutions) and I came to appreciate explicitly writing types; you know what data to expect and hence error if different. I appreciated this when revisiting this code because it took a while for me to get what those function parameters value type were, with typescript this would have been a breeze.
+
+I can end this project at this point cos my initial vision for this has been exceeded! yes, check the version one! But I'll keep adding to it and improving it, trying to apply every knowledge I have.
+
+
+..........
+
+work towards v3 begins now with v2.5!
+v2.5.0 - used native confirm method to implement the quit game dialog. Also made the status bar with time and the popular 'made with <3' note. you know the 2nd one should even be its own version ie v2.6 cause it is also its own feature! Anyways this means I can break up the larger features to be implemented.       20-10-2021
+
+v2.6.0 done! - added continue game and new game ui with functionality;
+    start is renamed to "new game"
+    known bug: entering into a new game after continue option is enabled, and exiting without playing results in the scoreboard still having a single entry although the rest will all be cleared. will release a bug fix soon
+    21-10-2021 (although committed 22nd)
+v2.6.1 - fix persistent entry that happens even on no gameplay on Newgame
+    getscore is a global; that's the cause.
+    this kept me up since yesterday aarghh! as in it kept 'bugging' me (pun intended) till I solved it today    
+    22-10-2021
+
+27-11-2021_v3.0.0 - massive overhaul of entire game; reconstructing of existing code and many new features additions
+dev/technical side
+refactored existing code
+embraced BEM naming convention for increased readability and predictability
+used sass, a css preprocesser
+abandoned using typescript due to difficulty setting it up for use
+
+ui/styles side
+game launches with a splash screen 
+more themes to choose from, random theme upon each launch of game
+animated backgrounds added, enabled by default, random one upon each launch
+high responsiveness; rewrites and additions of css flexbox and grids. 
+custom fonts,icons, images imported ie not using default browser fonts
+in-game texts updated (all sections)
+
+functionality/script side
+a typical game experience due the implementing of obstacles in game logic
+added date logger (stating it here as it wasn't mentioned in v2.5+)
+added storage functionality for backing up game progress using native localstorage
+increased code modularity

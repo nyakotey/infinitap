@@ -1,0 +1,50 @@
+seems i went too fast ie the vision for v3. now going deep into how I'd implement the webstorage I'm seeing its a very big task. narrowing down to the little details, I'm starting to think the webstorage feature can only stand as a major feature, hence v3. node introduction will then have to be v4. hmm this is tough
+getting the data for the localstorage is the easy part, but the manner I'd implement it so that the game starts with the data is the challenge atm.
+
+amazing I never thought of adding a splash screen all this while! yh! over the weekend as I kept pondering on how to make v3 drastically/more different from the v2, it then hit me to add the splash screen. so I opened up photoshop and tried making a logo. in short a splash screen is involved (oluwa is involved)
+
+I've been working on the webstorage implementation. I think I'll have to begin the overhauling (refactoring and redesigning) before I can successfully do it. my initial plan was to implement all functionality before I begin the process, but as I have been working on it, I've identified challenges arising due to the style the code was written. Nevertheless the storage functionality works as some aspects of the game that I did implement worked perfectly. 
+the overhauling is necessary, as I keep seeing more things I left out each time I add sth new to be stored which also needs to be added.
+
+
+28-10-21
+failed to log dates for past entries, anyways I can always start now.
+some more ideas 
+switch affected content to grid css - some layout issues came to bear when testing out different fonts. homebtns, custominputs etc
+random game theme every time it is opened
+add animations and transitions ...prob for v4 as the ui change part
+
+remember to add dummy scorepage text to js when newgame
+
+30-10-21
+v4
+node stuff, user account, mediaquery css file, animated background default
+
+31-10-21
+we all knew that infinitap wasn't really a 'game'. v2's major upgrade from v1,and onward was all an attempt to make it feel like an actual game. Almost completing v3, despite the great new features, deep down it still doesn't qualify.
+a real game has an obstacle, a challenge. this has none...
+on my way back from campus after designing perezia's sports steward flyer, I had an idea. I'm going to make the game button randomly go 'skullhead'. if you happen to click it when in that mode you lose. the quote block will then display you didn't see that one coming.
+also i'll see if I'll succeed in using promise.all of gifs(and perhaps other files to be loaded) to set the splash screen timeout.
+also js rework has been done, thus storage can commence (per what I said). to be honest I'm feeling very lazy to do this esp after seeing how great the ui features and other functionalities are working.
+
+06-11-21
+yesternight I began working on the storage. I created a separate storage.js file. today I did more work on it and finally put it in the main js file to put it to work. I made the necessary corrections. I'm so happy that I've implemented this successfully. It was a nice challenge. I even used a getter in one object; up till now I've never really used accessor properties, ever only tried it out as an example and not "a real project scenario". Simply happy right now.
+
+16-11-21
+todo: empty newgame should remove the continue gamebutton
+todo is done 27-11-21
+
+27-11-21
+v3 is released woohooooooooooo!!!
+I want to congratulate myself for my efforts in making this a reality.
+Its so unfortunate that I'm more than broke atm, and pay day is at least a week away, so I can't be celebrating this day.
+But honestly I have done very well, the sheer difference between v2.5+ and v3 is huge, not to even mention that v2.5+ was actually a buildup to v3.
+1. i have underused, undermined and insulted git given the way I worked up to v3 (creating multiple folders, commenting out parts, creating new files to implement new features...that's what git is clearly designed to make you not do any of these!). I'm happy that in the journey towards releasing v3 this day, I've learnt more git and henceforth will use it rightly.
+I learnt and used scss/sass, a css preprocessor to generate my css, which I got interested in using when watching a BEM naming convention tutorial.
+I tried doing same for js ie use typescript to "generate" my file (just like sass->css). however i faced challenges setting it up and gave up on it.
+I dived deeper into js as I faced challenges both self-given(implementing features) and by the code itself (bugs) and managed to solved them. iow my coding problem-solving skills is going up.
+indeed, enjoy the process, journey onto the destination!!
+
+new todos
+promisify loading of assets to handle splashscreen timeout
+add bg highlighting or visual tag on scoreboard to mark different difficulty levels. (it is weird seeing clicks: 55 level 5 and same clicks but level 2) 
